@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import track from '../assets/sounds/creation.mp3'
 import back from '../assets/images/back.png'
@@ -8,6 +8,7 @@ import assassin from '../assets/images/characters/assassin.png'
 import warrior from '../assets/images/characters/warrior.png'
 import ranger from '../assets/images/characters/ranger.png'
 import master from '../assets/images/characters/routeMaster.png'
+import getCharacter from '../Javascript/getCharacter.js'
 
 // const mongoose = require('mongoose')
 
@@ -26,7 +27,6 @@ let values = [
 
 export default function Creation() {
 
-    //TODO: Allow user to set a name for their character
     //TODO: New characters start with 5000 currency for testing purposes, change later
     const characters = [assassin, master, ranger, warrior]
 
@@ -34,6 +34,8 @@ export default function Creation() {
     const [charData, setcharData] = useState({
     });    
    
+    const username = localStorage.getItem("username");
+
     // const [displayChar, setdisplayChar] = useState({
     // });    
 
@@ -204,9 +206,9 @@ export default function Creation() {
                     currency: 5000,
                     exp: 0,
                     items: [],
-                    image: assassin,
+                    image: 'assassin',
                     hp: 80,
-                    characterName: "CSS Assassin",
+                    characterName: username,
                     atk: 105,
                     def: 15,
                 };
@@ -217,7 +219,7 @@ export default function Creation() {
             } else if (choice === 'master') {
                 sendToAPI = {
                     atk: 40,
-                    characterName: "Route Master",
+                    characterName: username,
                     characterClass: "Route Master",
                     currency: 5000,
                     def: 30,
@@ -225,7 +227,7 @@ export default function Creation() {
                     hp: 120,
                     items: [],
                     level: 1,
-                    image: master
+                    image: 'master'
                 };
                 // setdisplayChar(sendToAPI);
                 chosenChar = characters[1];
@@ -234,7 +236,7 @@ export default function Creation() {
             } else if (choice === 'ranger') {
                 sendToAPI = {
                     atk: 60,
-                    characterName: "React Ranger",
+                    characterName: username,
                     characterClass: "React Ranger",
                     currency: 5000,
                     def: 40,
@@ -242,7 +244,7 @@ export default function Creation() {
                     hp: 100,
                     items: [],
                     level: 1,
-                    image: ranger
+                    image: 'ranger'
                 };
                 // setdisplayChar(sendToAPI);
                 chosenChar = characters[2];
@@ -251,7 +253,7 @@ export default function Creation() {
             } else if (choice === 'warrior') {
                 sendToAPI = {
                     atk: 60,
-                    characterName: "Keyboard Warrior",
+                    characterName: username,
                     characterClass: "Keyboard Warrior",
                     currency: 5000,
                     def: 30,
@@ -259,13 +261,12 @@ export default function Creation() {
                     hp: 110,
                     items: [],
                     level: 1,
-                    image: warrior
+                    image: 'warrior'
                 };
                 // setdisplayChar(sendToAPI);
                 chosenChar = characters[3];
                 return createCharacter(sendToAPI);
             };
-
             //Assign state here?
             // const data = selectClass();
             //Evaluate state to see if data will match body necessary for POST request.
@@ -288,7 +289,6 @@ export default function Creation() {
         }
     }
 
-    //TODO: POST request is failing. Sending default state. Refer above
     const createCharacter = async (data) => {
         // console.log(`Log of data that is being passed into callback function: ${data}`);
         console.log(`Log of data that is being passed into callback function but stringified: ${JSON.stringify(data)}`);
@@ -319,6 +319,7 @@ export default function Creation() {
 
     return (
         <div className="pageContainer creationBg">
+            <div className='rotate'>Rotate to play</div>
             <div className="creationContainer">
                 <div className="topNavContainer">
                     <Link to={'/'} style={{textDecoration: 'none', color: 'inherit'}}className="backbutton"><img className='backbuttonimg' src={back} alt="Back_Button" /> Back</Link>
@@ -340,15 +341,12 @@ export default function Creation() {
                                 <div className='statcontainer'>
                                 <div className='stats'>
                                     <h3 className='statfont'> Health: 100</h3>
-                                    <button className='plus'></button>
                                 </div >
                                 <div className='stats'>
                                     <h3 className='statfont'>Attack: 50</h3>
-                                    <button className='plus'></button>
                                 </div >
                                 <div className='stats'>
                                     <h3 className='statfont'> Defense: 60</h3>
-                                    <button className='plus'></button>
                                 </div >
                             </div>
 
