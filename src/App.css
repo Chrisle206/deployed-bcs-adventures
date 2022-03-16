@@ -558,6 +558,21 @@ justify-content: space-between;
   -o-background-size: cover;
   background-size: cover;
   position: relative;
+  background-color: rgb(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
+}
+.MainBattleContainer5{
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  margin: auto;
+  height: 70vh;
+  background: url('./assets/images/jbg4.gif') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
 }
 .battleContainer{
   display: flex;
@@ -740,6 +755,89 @@ height: 20vh;
   background-color: rgb(0, 0, 0, 0.3);
   background-blend-mode: multiply;
 }
+.mainIntroContainer2{
+  background: url('./assets/images/jbg6.gif') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: rgb(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+}
+.mainIntroContainer3{
+  background: url('./assets/images/jbg5.gif') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: rgb(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+}
+.joe{
+  width: 40%;
+  position: fixed;
+  display: block;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+  opacity: 0;
+  animation: joe 2s forwards;
+  animation-delay: 12s;
+}
+@keyframes joe {
+  from {
+     opacity: 0;
+  }
+  to {
+    opacity: 1;
+}
+}
+.joetitle2{
+  margin-top: 30px;
+  font-size: 48px;
+  text-align: center;
+  animation: disappear 2s forwards;
+  animation-delay: 14s;
+}
+@keyframes disappear{
+  from{
+    opacity: 1
+  }
+  to {
+    opacity: 0;
+  }
+}
+.joetitle{
+  margin-top: 30px;
+  font-size: 48px;
+  text-align: center;
+
+}
+.finaldesc{
+  animation: disappear 2s forwards;
+  animation-delay: 14s;
+  font-size: 24px;
+  margin: 0px auto;
+  text-align: center;
+}
+.contbutton{
+  border: 0;
+  padding: 0 24px;
+  font-size: 32px;
+  margin: auto;
+  font-family: inherit;
+  background-color: inherit;
+  color: white;
+  --pixel: 0.1rem;
+  opacity: 0.5;
+  z-index: 2;
+}
+.contbutton:hover{
+opacity: 1;
+}
 .wingedsword{
     width: 80px;
     margin: 20px;
@@ -750,7 +848,7 @@ height: 20vh;
   align-items: center;
   justify-content: space-between;
   font-size: 48px;
-  margin: 0 auto;
+  margin: auto auto;
   padding: 0 20px 0 30px;
   border: 0;
   font-family: inherit;
@@ -770,8 +868,9 @@ height: 20vh;
 }
 
 .description{
-  font-size: 24px;
-  margin: 50px;
+  font-size: 32px;
+  margin: 10px auto;
+  text-align: center;
 }
 .modalBTN{
   color: white;
@@ -783,28 +882,28 @@ height: 20vh;
   padding: none;
 }
 .line1{
-animation: slide-in 3s 1 forwards;
+animation: slide-in 2s 1 forwards;
 opacity: 0;
 display: block;
 }
 .line2{
-animation: slide-in 3s 1 forwards;
-animation-delay: 3s;
+animation: slide-in 2s 1 forwards;
+animation-delay: 2s;
 opacity: 0;
 }
 .line3{
-animation: slide-in 3s 1 forwards;
-animation-delay: 6s;
+animation: slide-in 2s 1 forwards;
+animation-delay: 4s;
 opacity: 0;
 }
 .line4{
-animation: slide-in 3s 1 forwards;
-animation-delay: 9s;
+animation: slide-in 2s 1 forwards;
+animation-delay: 6s;
 opacity: 0;
 }
 .line5{
-animation: slide-in 3s 1 forwards;
-animation-delay: 12s;
+animation: slide-in 2s 1 forwards;
+animation-delay: 8s;
 opacity: 0;
 }
 
@@ -1109,7 +1208,7 @@ visibility: visible;
     transform: scale(1);
   }
   }
-  .mainContainer, .creationContainerm, .mainCharContainer,.mainStartContainer,.MainBattleContainer,.loading,.creationContainer,.MainBattleContainer2,.MainBattleContainer3,.MainBattleContainer4{
+  .mainContainer, .creationContainerm, .mainCharContainer,.mainStartContainer,.MainBattleContainer,.loading,.creationContainer,.MainBattleContainer2,.MainBattleContainer3,.MainBattleContainer4,.MainBattleContainer5{
     display: none;
   }
 }

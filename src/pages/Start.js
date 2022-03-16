@@ -19,7 +19,6 @@ export default function Start() {
     function volOff() {
         if (useState !== false) {
             audioRef.current.pause()
-            console.log('muting')
             setStatus(true)
         }
     }
@@ -27,7 +26,6 @@ export default function Start() {
     function volOn() {
         if (useState !== true) {
             audioRef.current.play()
-            console.log('unmuting')
             setStatus(false)
         }
     }
@@ -240,7 +238,7 @@ export default function Start() {
                         ) }
                     </div>
                 ) : (
-                        <Link to={'./Start'} data-bs-toggle="modal" data-bs-target="#signupModal" style={{ textDecoration: 'none', color: 'inherit' }} className="PlayCard pixel-border">Play<img className="PlayButton" src={play} alt="Story" /></Link>
+                        <Link to={'./Start'} data-bs-toggle="modal" data-bs-target="#signupModal" style={{ textDecoration: 'none', color: 'inherit' }} className="PlayCard pixel-border playbtn">Play<img className="PlayButton" src={play} alt="Story" /></Link>
                 ) }
                 </div>
                 <div className="bottomNavContainer">
