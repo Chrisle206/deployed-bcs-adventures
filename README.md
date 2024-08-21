@@ -33,24 +33,29 @@ There is a separate API component which we also developed, and it hosts all enem
 It's easy to begin playing! Once you've loaded up the game, you will want to click 'Sign Up' at the top right. You'll be prompted to create a unique username and password for your account. Your username will become the name for your character, so choose wisely! Once you're signed in, close the popup and click 'Play' to be taken to the character creation page.
 
 
-![start page signup](public/ss1.PNG)
+![image](https://github.com/user-attachments/assets/9ddc7d65-8aa3-4a20-9398-17d1a411d677)
+
 
 
 On the character creation page, you'll be prompted to answer questions pertaining to your coding skills and preferences. Your character will be generated based on your inputs! There are currently four classes existing in the game. Sign up and see which class your coding skills will get you!
 
 
-![creation page](public/ss2.PNG)
+![image](https://github.com/user-attachments/assets/276ffd1c-0360-44bc-9065-ff27f033f304)
+
 
 Once your character has been generated, you'll be taken to the tavern screen. This is the central hub for the player and currently provides three options for navigation. The user can click on 'Character' to be taken to the shop, wherein they can view their stats and purchase items using currency gained from battle to buff their character further. The user can also click on 'Story' to be taken to the main battle sequence, where they'll endure a gauntlet of tough boss enemies that'll test their skills as developers and gamers! The third option, 'Dungeon,' is currently in development, and will be the main source of EXP and currency for our game. Since this feature has not yet been implemented, we have given new players plenty of currency to buy all the items necessary to defeat all the bosses in the 'Story' mode.
 
 
-![tavern page](public/ss5.PNG)
+![image](https://github.com/user-attachments/assets/0830b87c-9825-4253-8718-bc056a6d71a5)
 
 
-![battle page](public/ss4.PNG)
+
+![image](https://github.com/user-attachments/assets/7d7094ee-7f24-4da7-b10a-8a6171b963dd)
 
 
-![character page](public/ss3.PNG)
+
+![image](https://github.com/user-attachments/assets/ae9dfa24-cc07-4d13-9871-5ed6820d5d3f)
+
 
 
 
